@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="updatetime">
+
+    </div>
+    <script>
+        // let t = new Date();
+        // let y = t.getFullYear();
+        // let m = t.getMonth();
+        // let d = t.getDate(); 
+        // let h = t.getHours();
+        // let i = t.getMinutes();
+        // let s = t.getSeconds();
+
+        // document.write("Date:" +" " + d+ "-"+ m + "-" + y + "; "+ "Time:"+" " + h + " : " + i + ":" + s );
+
+        function updateTime(){
+            let t = new Date();
+            let y = t.getFullYear();
+            let m = t.getMonth();
+            let d = t.getDate(); 
+            let h = t.getHours();
+            let i = t.getMinutes();
+            let s = t.getSeconds();
+
+            // let time = document.getElementById("updatetime");
+            let time = document.getElementsByClassName("updatetime")[0];
+
+            //time.innerHTML = d + "-"+ m + "-" + y + "; " + " " + h + " : " + i + ":" + s;
+            time.innerHTML = y + "-" + m + "-" + d + " " + h + ":" + i + ":" + s;
+
+            }
+
+            setInterval(updateTime, 1000);
+
+    </script>
+</body>
+</html>
